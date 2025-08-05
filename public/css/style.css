@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efectos de partículas de fondo */
+.particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #44ff44;
+    border-radius: 50%;
+    animation: float-particles 15s infinite linear;
+    opacity: 0.6;
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    background: #ff4444;
+}
+
+.particle:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+    background: #44ff44;
+}
+
+.particle:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+    background: #ffaa44;
+}
+
+.particle:nth-child(4) {
+    left: 40%;
+    animation-delay: 6s;
+    background: #ff4444;
+}
+
+.particle:nth-child(5) {
+    left: 50%;
+    animation-delay: 8s;
+    background: #44ff44;
+}
+
+.particle:nth-child(6) {
+    left: 60%;
+    animation-delay: 10s;
+    background: #ffaa44;
+}
+
+.particle:nth-child(7) {
+    left: 70%;
+    animation-delay: 12s;
+    background: #ff4444;
+}
+
+.particle:nth-child(8) {
+    left: 80%;
+    animation-delay: 14s;
+    background: #44ff44;
+}
+
+.particle:nth-child(9) {
+    left: 90%;
+    animation-delay: 1s;
+    background: #ffaa44;
+}
+
+.particle:nth-child(10) {
+    left: 15%;
+    animation-delay: 3s;
+    background: #ff4444;
+}
+
+.particle:nth-child(11) {
+    left: 25%;
+    animation-delay: 5s;
+    background: #44ff44;
+}
+
+.particle:nth-child(12) {
+    left: 35%;
+    animation-delay: 7s;
+    background: #ffaa44;
+}
+
+.particle:nth-child(13) {
+    left: 45%;
+    animation-delay: 9s;
+    background: #ff4444;
+}
+
+.particle:nth-child(14) {
+    left: 55%;
+    animation-delay: 11s;
+    background: #44ff44;
+}
+
+.particle:nth-child(15) {
+    left: 75%;
+    animation-delay: 13s;
+    background: #ffaa44;
+}
+
+@keyframes float-particles {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+        transform: translateY(90vh) scale(1);
+    }
+    90% {
+        opacity: 0.6;
+        transform: translateY(10vh) scale(1);
+    }
+    100% {
+        transform: translateY(-10vh) scale(0);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #ff4444;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    background: #2a2a2a;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #ffaa44;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #ffaa44;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.important-note {
+    background: #4a2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #ff6644;
+    border: 2px solid #ff6644;
+}
+
+.important-note h3 {
+    color: #ff6644;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.evidence-card {
+    background: #2d3d2d;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border: 2px solid #44aa44;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(68, 170, 68, 0.2);
+}
+
+.evidence-card h3 {
+    color: #66dd66;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.evidence-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.evidence-image:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+    background: #20bf5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.user-message {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #ff4444;
+}
+
+.user-message ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.user-message li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+}
+
+.highlight-users {
+    color: #66ff66;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px #66ff66;
+    animation: pulse-users 2s ease-in-out infinite alternate;
+}
+
+.highlight-lives {
+    color: #ff6666;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px #ff6666, 0 0 20px #ff6666;
+    animation: pulse-lives 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-users {
+    from {
+        text-shadow: 0 0 8px #66ff66;
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 15px #66ff66, 0 0 25px #66ff66;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse-lives {
+    from {
+        text-shadow: 0 0 10px #ff6666, 0 0 20px #ff6666;
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 15px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff6666;
+        transform: scale(1.15);
+    }
+}
+
+.evidence {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #555;
+}
+
+.free {
+    color: #44ff44;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #44ff44, 0 0 20px #44ff44;
+    animation: glow-free 2s ease-in-out infinite alternate;
+    position: relative;
+    display: inline-block;
+}
+
+.free::before {
+    content: '✨';
+    position: absolute;
+    left: -25px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.free::after {
+    content: '✨';
+    position: absolute;
+    right: -25px;
+    animation: sparkle 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes glow-free {
+    from {
+        text-shadow: 0 0 10px #44ff44, 0 0 20px #44ff44;
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 15px #44ff44, 0 0 30px #44ff44, 0 0 40px #44ff44;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.consequence {
+    background: #3d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.countdown {
+    text-align: center;
+    margin: 30px 0;
+    padding: 25px;
+    background: #252525;
+    border-radius: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.time-unit {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 80px;
+    border: 1px solid #555;
+}
+
+.time-unit span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #44ff44;
+}
+
+.time-unit label {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: #2d2d2d;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #ffaa44;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .timer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .message-box {
+        padding: 20px;
+    }
+    
+    .evidence-image {
+        max-width: 100%;
+    }
+    
+    .whatsapp-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .important-note {
+        padding: 15px;
+    }
+    
+    .evidence-card {
+        padding: 20px;
+    }
+}
