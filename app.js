@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Checker Status - Temporalmente Desactivado',
-        userPhone: '+57 318 2016160'
+        userPhone: '+57 322 6922623'
     });
 });
 
